@@ -4,4 +4,4 @@
 
 Mentor of Pre-Bootcamp Fazztrack: Fakhri Ridho
 
-© 2022
+<p> <samp><i>&copy; 2022</i></samp> </p>
