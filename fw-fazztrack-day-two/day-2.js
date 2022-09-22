@@ -14,6 +14,7 @@ Instructor: ${identitas.instructor}
 ----------------------
 `);
 
+
 console.log(`
 Latihan 01`);
 const merebus = (bahan, proses) => {
@@ -114,13 +115,36 @@ const reverse = string => {
 }
 reverse("javascript");
 
-// || Latihan 09
+
+// console.log(`
+// Latihan 9`);
+
 
 console.log(`
 Latihan 10`);
-function changeLatters(string) {
+// Cara Pertama
+/*function changeLatters(string) {
   console.log(string)
 }
-const string = "Masamba";
-changeLatters(string.replace(/a/g,"i"));
+const words = "Masamba";
+changeLatters(string.replace(/a/g,"i"));*/
 
+// Cara kedua
+const changeLatters = (word, tempLetter, changeLatters) => {
+  
+  let newWords = "";
+  let words;
+
+  for( let index = 0; index < word.length; index++) {
+    words = word[index];
+    if(words === tempLetter) {
+      words = changeLatters;
+    }
+    // console.log(words);
+    newWords += words;
+  }
+    return newWords
+}
+const result = changeLatters("love your self", "o", "i");
+
+console.log(result)
