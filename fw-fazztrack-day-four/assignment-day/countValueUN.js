@@ -3,15 +3,15 @@ const countValue = (values, gradeValue) => {
 
   if (typeof values !== "number") {
 
-    return notNumberAlert();
+    /*return notNumberAlert();*/
     
   } else if ( values == null || values == "") {
 
-    return emptyValueAlert();
+    /*return emptyValueAlert();*/
 
   } else if ( values <= 0 ) {
 
-    return minNumberAlert();
+    /*return minNumberAlert();*/
 
   }
   else {
