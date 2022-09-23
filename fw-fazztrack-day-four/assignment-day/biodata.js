@@ -1,10 +1,10 @@
-const biodata = {
+let biodata = {
   name: "MUH. AHSAN",
   age: 72,
   hobbies: [
     "futsal",
     "reading"],
-  isMarriade: false,
+  isMarried: false,
   schoolList: [
     {
       name: "SDN 089 Masamba",
@@ -42,3 +42,17 @@ const biodata = {
 };
 
 // console.log(biodata)
+
+for(let props in biodata ) {
+  console.log(props);
+}
+
+/*for(let [key, value] of Object.entries(biodata)){
+  console.log(`${key} : ${value}`);
+}*/
+
+/*let {name, age, hobbies, isMarriade, ...res} = biodata;
+
+console.log(res);*/
+
+// console.log(res.schoolList[3])

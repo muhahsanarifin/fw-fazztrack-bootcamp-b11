@@ -116,8 +116,8 @@ const reverse = string => {
 reverse("javascript");
 
 
-// console.log(`
-// Latihan 9`);
+console.log(`
+Latihan 9`);
 
 
 console.log(`
@@ -133,14 +133,11 @@ changeLatters(string.replace(/a/g,"i"));*/
 const changeLatters = (word, tempLetter, changeLatters) => {
   
   let newWords = "";
-  let words;
 
-  for( let index = 0; index < word.length; index++) {
-    words = word[index];
+  for (let words of word) {
     if(words === tempLetter) {
-      words = changeLatters;
+      words = changeLatters
     }
-    // console.log(words);
     newWords += words;
   }
     return newWords
