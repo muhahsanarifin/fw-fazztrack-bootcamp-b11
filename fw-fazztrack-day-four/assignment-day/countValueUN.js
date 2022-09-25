@@ -1,22 +1,8 @@
 const countValue = (values, gradeValue) => {
-
-  if (typeof values !== "number") {
-    
-    return notNumberAlert();
-
-  } else if (values == null || values == "") {
-
-    return emptyValueAlert();
-
-  } else if (values <= 0) {
-
-    return minNumberAlert();
-
-  } else {
-
-    let averageValues = values / 4;
-
-    if (averageValues >= 90 && averageValues <= 100) {
+  
+  let averageValues = values/4;
+  
+    if(averageValues >= 90 && averageValues <= 100) {
       console.log(`Rata-rata = ${averageValues}`);
       console.log(`Grade = ${gradeValue[0]}`);
     } else if (averageValues >= 80 && averageValues <= 89) {
@@ -32,8 +18,9 @@ const countValue = (values, gradeValue) => {
       console.log(`Rata-rata ${averageValues}`);
       console.log(`Grade = ${gradeValue[4]}`);
     }
-  }
-};
+
+  } 
+
 
 const notNumberAlert = () => {
   console.log("Must be number type data");
@@ -47,11 +34,26 @@ const minNumberAlert = () => {
   console.log("Value must be positive");
 };
 
-const mtk = 90;
-const bahasaIndonesia = 90;
+const mtk = 80;
+const bahasaIndonesia = 80;
 const bahasaInggris = 90;
 const ipa = 100;
 const sumValues = mtk + bahasaIndonesia + bahasaInggris + ipa;
 const grade = ["A", "B", "C", "D", "E"];
 
-countValue(sumValues, grade);
+if (typeof sumValues !== "number") {
+
+  return notNumberAlert()
+  
+} else if ( sumValues == null || sumValues == "") {
+
+  return emptyValueAlert()
+
+} else if ( sumValues <= 0 ) {
+
+  return minNumberAlert();
+
+}
+else {
+  countValue(sumValues, grade);
+}
