@@ -115,10 +115,32 @@ const reverse = string => {
 }
 reverse("javascript");
 
-
 console.log(`
 Latihan 9`);
+const validatePalin = string => {
+  for (let index = 0; index < string.length / 2; index++) {
 
+    if(string[index] !== string[string.length - 1 - index]) {
+      
+
+    return `It's not a palindrome`
+
+    }
+  }
+
+  return `It is a palindrome`
+
+}
+const string = "abcba";
+
+if (typeof string === "string") {
+  const resultPalin = validatePalin(string);
+  
+  console.log(resultPalin)
+  
+} else {
+  console.log(`Must be input number!`)
+}
 
 console.log(`
 Latihan 10`);
