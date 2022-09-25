@@ -4,7 +4,7 @@ const biodata = {
   hobbies: [
     "futsal",
     "reading"],
-  isMarriade: false,
+  isMarried: false,
   schoolList: [
     {
       name: "SDN 089 Masamba",
