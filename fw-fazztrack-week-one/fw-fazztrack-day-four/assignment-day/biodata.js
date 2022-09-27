@@ -43,13 +43,17 @@ let biodata = {
 
 // console.log(biodata)
 
-for(let props in biodata ) {
-  console.log(props);
-}
+// let result = "";
 
-/*for(let [key, value] of Object.entries(biodata)){
-  console.log(`${key} : ${value}`);
-}*/
+// for(let props in biodata ) {
+
+//   result += biodata[props] + "\n";
+// }
+// console.log(result);
+
+// for(let [key, value] of Object.entries(biodata)){
+//   console.log(`${key} : ${value}`);
+// }
 
 /*let {name, age, hobbies, isMarriade, ...res} = biodata;
 

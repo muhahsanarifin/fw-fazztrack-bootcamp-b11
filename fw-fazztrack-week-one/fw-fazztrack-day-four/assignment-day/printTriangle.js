@@ -10,7 +10,6 @@ const printSegitigaProcess = (value) => {
     console.log(number);
   }
 
-
 const notNumberalert = () => {
   console.log("Must be number type data");
 };
@@ -21,7 +20,6 @@ const printSegitiga = 5;
 
     printSegitigaProcess(printSegitiga);
     
-
   } else {
 
     return notNumberalert();

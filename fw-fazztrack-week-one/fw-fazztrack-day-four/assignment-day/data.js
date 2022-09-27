@@ -16,8 +16,8 @@ let data = {
 
 console.log(data)
 
-// a. Spread Operator
 
+// a. Spread Operator
 /*Object.assign(data,{
   name:"MUH. AHSAN",
   username:"muhahsanarifin",
@@ -36,7 +36,6 @@ console.log(margedData)
 
 
 // b. Destrucutring
-
 const {street, city} = data.address;
 
 console.log(`

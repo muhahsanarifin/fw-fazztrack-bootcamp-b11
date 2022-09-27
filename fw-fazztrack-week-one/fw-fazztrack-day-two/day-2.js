@@ -131,6 +131,7 @@ const validatePalin = string => {
   return `It is a palindrome`
 
 }
+
 const string = "abcba";
 
 if (typeof string === "string") {
