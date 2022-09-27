@@ -29,10 +29,10 @@ const name = [
 ];
 
 
-const searchName = (initName, maxOuput) => {
+const searchName = (initName, maximumOuput, callbackStatement) => {
   let arrs = [];
   for (let index = 0; index < name.length; index++) {
-    if (cbStatement(name[index], initName) && arrs.length < maxOuput) {
+    if (callbackStatement(name[index], initName) && arrs.length < maximumOuput) {
       arrs.push(name[index]);
     }
   }
@@ -42,11 +42,11 @@ const searchName = (initName, maxOuput) => {
 const cbStatement = (nameIndex, IntialName) => {
   return nameIndex.toLowerCase().indexOf(IntialName.toLowerCase()) > -1
 }
-const init = "Ab";
+const init = "an";
 const maxOuput = 3;
 
 if (typeof init == "number" || init == null) 
   return console.log("Input in init variable must be number")
 
-console.log(searchName(init, maxOuput));
+console.log(searchName(init, maxOuput, cbStatement));
 
