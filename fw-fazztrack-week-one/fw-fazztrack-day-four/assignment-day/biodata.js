@@ -1,6 +1,6 @@
 let biodata = {
   name: "MUH. AHSAN",
-  age: 72,
+  age: 23,
   hobbies: [
     "futsal",
     "reading"],
