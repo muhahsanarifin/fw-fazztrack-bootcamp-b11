@@ -195,3 +195,18 @@
 .alert-show {
   display: none;
 }
+
+/* || Responsive view */
+@media all and (max-width: 480px) {
+
+  .daftar-nama {
+    width: auto;
+    /* border: 1px solid darkorange; */
+  }
+
+  .footer p {
+    width: auto;
+    font-size: 10px;
+    /* border: 1px solid darkblue; */
+  }
+}
