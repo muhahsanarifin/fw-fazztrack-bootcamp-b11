@@ -19,18 +19,17 @@ async function getData(API) {
 getData(API_URL);
 
 function show(data) {
-
-  let insetData = "";
-    data.forEach((datas) => {
+  let insertData = "";
+    data.forEach(datas => {
       let insetDatas = `
         <li>${datas.name}</li>
       `;
 
-      insetData += insetDatas;
+      insertData += insetDatas;
     });
 
   const daftarNama = document.getElementById("daftarNama")
-    daftarNama.innerHTML = insetData;
+    daftarNama.innerHTML = insertData;
 }
 
 // Loading handle

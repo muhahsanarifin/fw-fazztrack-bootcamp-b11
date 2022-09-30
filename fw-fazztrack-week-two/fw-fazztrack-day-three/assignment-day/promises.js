@@ -16,7 +16,6 @@ const motocycleBrand = brand =>{
 
 const inputmotocycleBrand = (brand, motocycleBrand) => {
   try {
-    // Validasi Scripts
     if (brand == null || brand == "" || typeof brand != "string")
       throw `Jangan isi variable hari seperti ini "${brand}", silakan disi dengan tepat`;
 

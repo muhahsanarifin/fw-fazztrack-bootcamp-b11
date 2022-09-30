@@ -12,7 +12,6 @@ const cekHariKerja = (day) => {
   })
 }
 
-
 const inputHari = (hari, cekHariKerja) => {
 
   try {
@@ -24,7 +23,6 @@ const inputHari = (hari, cekHariKerja) => {
     cekHariKerja(hari)
     .then(res => {
       const responHariKerja = res;
-      // return responHariKerja
       return console.log(`Ini hari ${responHariKerja} waktunya anda berangkat kerja.`);
     })
     .catch(error => {
