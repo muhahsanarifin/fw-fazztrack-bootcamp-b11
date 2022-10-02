@@ -71,5 +71,5 @@ const inputClan = (paramClan, funClan) => {
   }
 }
 
-const iClan = "";
-inputClan(iClan, clan)
+const initClan = "bugis";
+inputClan(initClan, clan)

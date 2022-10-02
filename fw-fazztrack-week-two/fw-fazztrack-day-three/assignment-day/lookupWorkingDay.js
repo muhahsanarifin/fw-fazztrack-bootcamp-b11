@@ -1,26 +1,26 @@
-const cekHariKerja = (day) => {
+const lookupWorkingDay = (day) => {
   return new Promise ((resolve, reject) => {
     setTimeout(() => {
       const dataDay = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
-      let cek = dataDay.find((item) => {
+      let check = dataDay.find((item) => {
         return item.toLocaleLowerCase() === day.toLocaleLowerCase();
       });
-      if (cek) 
-        return resolve(cek);
+      if (check) 
+        return resolve(check);
         return reject(new Error("Hari ini bukan hari keja."));
     },3000);
   })
 }
 
-const inputHari = (hari, cekHariKerja) => {
+const inputHari = (day, lookupWorkingDay) => {
 
   try {
 
-  if(hari == null || hari == "" || typeof hari != "string")
+  if(day == null || day == "" || typeof day != "string")
       
-      throw `Jangan isi variable hari seperti ini "${hari}", silakan disi dengan tepat`;
+      throw `Jangan isi variable hari seperti ini "${day}", silakan disi dengan tepat`;
 
-    cekHariKerja(hari)
+    lookupWorkingDay(day)
     .then(res => {
       const responHariKerja = res;
       return console.log(`Ini hari ${responHariKerja} waktunya anda berangkat kerja.`);
@@ -35,6 +35,6 @@ const inputHari = (hari, cekHariKerja) => {
   
 } 
   
-const hari = "senin";
+const day = "kamis";
 
-inputHari(hari, cekHariKerja)
+inputHari(day, lookupWorkingDay);

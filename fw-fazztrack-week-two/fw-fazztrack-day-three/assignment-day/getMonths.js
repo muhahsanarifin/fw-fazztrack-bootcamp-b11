@@ -11,17 +11,15 @@ const getMonth = callback => {
 };
 
 
-const showMonth = (value, month) => {
-  
-  if(value == null)
+const showMonth = (obj, month) => {
+
+  if(!obj)
 
     return month.map( el => {
       console.log(`Month : ${el}`);
     });
 
-    return console.log(value.message);
-  
+    return console.log(obj.message);
+
 };
-
-getMonth(showMonth);
-
+getMonth(showMonth)
