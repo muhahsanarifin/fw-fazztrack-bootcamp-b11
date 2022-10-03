@@ -115,7 +115,7 @@
   color:  var(--secondColor);
 }
 
-/* || Component */
+/* || Main Alert Component */
 
 .lds-ellipsis {
   display: inline-block;
@@ -194,6 +194,19 @@
 
 .alert-show {
   display: none;
+}
+
+/* || Model Component */
+.model {
+  display: none;
+  position: absolute;
+  border-radius: 4px;
+  color: var(--regulerColor);
+  font-weight: 600;
+  background: var(--secondColor);
+  padding: 0.4rem;
+  right: 5rem;
+  top: 6rem;
 }
 
 /* || Responsive view */

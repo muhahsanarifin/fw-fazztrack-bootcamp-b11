@@ -13,7 +13,8 @@ async function getData(API) {
       throw new Error(`HTTP error status: ${res.status}`);
     }
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
+    model(error.message);
   }
 }
 getData(API_URL);
@@ -64,3 +65,13 @@ const alert = () => {
   const alert = document.querySelector(".alert");
     alert.classList.toggle("alert-show");
 }
+
+// Status Request Respond
+const model = (status) => {
+  const paraf = document.createElement("p");
+    paraf.innerHTML = `${status} 😥`;
+  const model = document.querySelector(".model");
+    model.append(paraf);
+    model.style.display = "block";   
+}
+// model()
