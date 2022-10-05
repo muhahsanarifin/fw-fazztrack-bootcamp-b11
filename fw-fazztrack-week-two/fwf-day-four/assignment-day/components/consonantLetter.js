@@ -11,7 +11,6 @@ const changeText = (word, tempLetter, changeLetter) => {
   let newText = "";
   for (let letter of word) {
     if(letter === tempLetter) letter = changeLetter
-
       newText += letter;
   }
   return newText;

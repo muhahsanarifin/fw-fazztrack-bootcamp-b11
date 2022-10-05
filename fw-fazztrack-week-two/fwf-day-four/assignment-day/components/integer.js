@@ -7,7 +7,6 @@ const divideAndSort = number => {
       return error
   }
 
-
  let items = number.toString().split("0")
 
   let result = "";

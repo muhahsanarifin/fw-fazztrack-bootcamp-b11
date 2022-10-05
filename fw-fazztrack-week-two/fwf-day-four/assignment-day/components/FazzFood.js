@@ -15,49 +15,50 @@
 */
 
 const fazzFood = (price, discount, distance, tax) => {
+  
   // Init variable
   const discVouchers = ["FAZZFOOD50", "DITRAKTIR60"];
-  let resultDiscount = "";
-  let deliveryFee = "";
-  let taxFee = "";
-  let subTotal = "";
+  let resultDiscount = 0;
+  let deliveryFee;
+  let taxFee;
+  let subTotal;
 
   // Validation
   try {
     if (typeof price !== "number") throw "Price value must be number !";
     if (typeof discount !== "string") throw "Dicount value must be string !";
     if (typeof distance !== "number") throw "Distance value must be number !";
-    if (discount !== discVouchers[0] && discount !== discVouchers[1])
-      throw `${discount}. The discount voucer is not found !`;
+    if (discount) {
+      if (discount !== discVouchers[0] && discount !== discVouchers[1])
+        throw `${discount}. The discount voucer is not found !`;
+    }
   } catch (error) {
-    return error;
+      return error;
   }
+
 
   // Process Section
-
   // Discount
-  if (discount) {
-    if (discount === discVouchers[0]) {
-      if (price >= 50000 && price <= 100000) {
-        resultDiscount = price * 0.5;
-      } else if (price > 100000) {
-        let maxDiscVourcher = 50000;
-        resultDiscount = price - maxDiscVourcher;
-      } else {
-        return "Minimum order Rp 50,000 of the discount voucher.";
-      }
-    } else if (discount === discVouchers[1]) {
-      if (price >= 25000 && price <= 50000) {
-        resultDiscount = price * 0.6;
-      } else if (price > 50000) {
-        let maxDiscVourcher = 30000;
-        resultDiscount = price - maxDiscVourcher;
-      } else {
-        return "Mimun order Rp 25,000 of the discount voucher.";
-      }
+  if (discount === discVouchers[0]) {
+    if (price >= 50000 && price <= 100000) {
+      resultDiscount = price * 0.5;
+    } else if (price > 100000) {
+      let maxDiscVourcher = 50000;
+      resultDiscount = price - maxDiscVourcher;
+    } else {
+      return "Minimum order Rp 50,000 of the discount voucher.";
+    }
+  } else if (discount === discVouchers[1]) {
+    if (price >= 25000 && price <= 50000) {
+      resultDiscount = price * 0.6;
+    } else if (price > 50000) {
+      let maxDiscVourcher = 30000;
+      resultDiscount = price - maxDiscVourcher;
+    } else {
+      return "Minumun order Rp 25,000 of the discount voucher.";
     }
   }
-
+  
   // Delivery Fee
   if (distance < 2) {
     deliveryFee = 5000;
@@ -66,15 +67,16 @@ const fazzFood = (price, discount, distance, tax) => {
   }
 
   // Tax
-  if (tax == true) {
+  if (tax) {
     taxFee = price * 0.05;
   } else {
     taxFee = 0;
   }
 
   // SubTotal
-  if (resultDiscount == "") {
-    subTotal = price + deliveryFee + taxFee;
+  if (!resultDiscount) {
+    resultDiscount = "0";
+    subTotal = deliveryFee + taxFee;
   } else {
     subTotal = resultDiscount + deliveryFee + taxFee;
   }
@@ -87,7 +89,7 @@ const fazzFood = (price, discount, distance, tax) => {
     Tax Fee: ${taxFee}
     ---------:
     Sub Total: ${subTotal}
-  `;
+  `
 };
 // Input FazzFood
 const price = 75000;

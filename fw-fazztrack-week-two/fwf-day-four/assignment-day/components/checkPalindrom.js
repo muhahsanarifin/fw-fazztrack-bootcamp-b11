@@ -14,7 +14,7 @@ const checkPalindrom = word => {
 }
 
 // Input text
-const text = "malam"
+const text = ""
 
 // Result check palindrom.
 const resutlPalindrom = checkPalindrom(text);
